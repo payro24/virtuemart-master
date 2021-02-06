@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.6" type="plugin" group="vmpayment" method="upgrade">
+    <name>payro24 for Virtuemart</name>
+    <version>2.0.1</version>
+    <description>payro24 payment gateway for Virtuemart</description>
+    <author>JMDMahdi, vispa, mnbp1371 , Publisher: payro24</author>
+    <authorUrl>https://payro24.ir</authorUrl>
+    <authorEmail>support@payro24.ir</authorEmail>
+    <creationDate>October 2020</creationDate>
+    <copyright>Copyright (C) 2020 payro24</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+
+    <files>
+        <filename plugin="payro24_virtuemart">payro24_virtuemart.php</filename>
+        <folder>payro24_virtuemart</folder>
+    </files>
+
+    <updateservers>
+        <server type="extension" priority="1" name="VM Payment - payro24 for Virtuemart">https://static.payro24.ir/plugins/joomla/virtuemart-payro24-update.xml</server>
+    </updateservers>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="payment" addfieldpath="/administrator/components/com_virtuemart/fields">
+                <field name="api_key" type="text" size="40" label="API KEY" description="" default=""/>
+                <field name="sandbox" type="checkbox" default="0" label="آزمایشگاه" description=""/>
+                <field name="success_massage" type="text" size="40" label="پیام پرداخت موفق" description="متن پیامی که می خواهید بعد از پرداخت موفق به کاربر نمایش دهید را وارد کنید. همچنین می توانید از شورت کدهای {order_id} برای نمایش شماره سفارش و {track_id} برای نمایش کد رهگیری پیرو استفاده نمایید." default="پرداخت شما با موفقیت انجام شد. کد رهگیری: {track_id}"/>
+                <field name="failed_massage" type="text" size="40" label="پیام پرداخت ناموفق" description="متن پیامی که می خواهید بعد از پرداخت ناموفق به کاربر نمایش دهید را وارد کنید. همچنین می توانید از شورت کدهای {order_id} برای نمایش شماره سفارش و {track_id} برای نمایش کد رهگیری پیرو استفاده نمایید." default="پرداخت شما ناموفق بوده است. لطفا مجددا تلاش نمایید یا در صورت بروز اشکال با مدیر سایت تماس بگیرید."/>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
